@@ -11,7 +11,6 @@ export function creerMatiere(matiere) {
   })
 }
 
-// Le code de la matière est sa clé primaire : on ne peut pas le modifier après création.
 export function modifierMatiere(code, matiere) {
   return appelerApi(`/matieres/${code}`, {
     method: 'PUT',
