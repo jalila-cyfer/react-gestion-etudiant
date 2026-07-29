@@ -40,9 +40,6 @@ function App() {
     chargerToutesLesDonnees()
   }, [chargerToutesLesDonnees])
 
-  // On recharge depuis le serveur après chaque écriture plutôt que de manipuler
-  // les tableaux à la main : les notes renvoyées par l'API imbriquent les objets
-  // Etudiant/Matiere complets, donc on laisse le backend garder la vérité.
   async function rechargerEtudiants() {
     setEtudiants((await etudiantsApi.getEtudiants()) || [])
   }
